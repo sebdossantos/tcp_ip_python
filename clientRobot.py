@@ -7,6 +7,7 @@ Created on Fri Apr 15 22:53:33 2016
 import socket, sys, threading
 import clientRobotView
 import time
+import Numpy
 
 th_R = "" #global variable
 
