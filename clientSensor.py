@@ -7,8 +7,6 @@ Created on Fri Apr 15 22:53:33 2016
 import socket, sys, threading
 import clientSensorView
 
-th_E = "" #global variable
-
 class ThreadEmission(threading.Thread):
     """objet thread gérant l'émission des messages"""
     def __init__(self, conn):

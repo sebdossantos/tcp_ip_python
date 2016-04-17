@@ -8,8 +8,6 @@ import socket, sys, threading
 import clientRobotView
 import time
 
-th_R = "" #global variable
-
 class ThreadReception(threading.Thread):
     """objet thread gérant la réception des messages"""
     def __init__(self, conn):
