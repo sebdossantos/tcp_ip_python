@@ -49,13 +49,15 @@ def decrement(lineEdit):
     
 def sendLidarPosition():
     """Fabrication de la trame à envoyer"""
-    message = (
-        str(view.lineEditX.text()) + " " + 
-        str(view.lineEditY.text()) + " " +
-        str(view.lineEditZ.text()) + " " +
-        str(view.lineEditA.text()) + " " +
-        str(view.lineEditB.text()) + " " +
-        str(view.lineEditC.text()) )
+    message = ("<Rob Type=\"KRC2\">"
+            + "<RIst"
+            + " X=\"" + str(view.lineEditX.text()) + "\""
+            + " Y=\"" + str(view.lineEditY.text()) + "\""
+            + " Z=\"" + str(view.lineEditZ.text()) + "\""
+            + " A=\"" + str(view.lineEditA.text()) + "\""
+            + " B=\"" + str(view.lineEditB.text()) + "\""
+            + " C=\"" + str(view.lineEditC.text()) + "\""
+            + "/></Rob>")
     th_E.send(message)
     
 def initSignals():

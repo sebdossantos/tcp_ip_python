@@ -27,7 +27,7 @@ class ThreadClient(threading.Thread):
             # Faire suivre le message à tous les autres clients : (ici le robot)
             for cle in conn_client:
                 if cle != nom:      # ne pas le renvoyer à l'émetteur
-                    conn_client[cle].send("Lidar ="+str(message[8:]))
+                    conn_client[cle].send(str(message[9:]))
                     
         # Fermeture de la connexion :
         self.connexion.close()      # couper la connexion côté serveur

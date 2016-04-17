@@ -17,7 +17,7 @@ class ThreadReception(threading.Thread):
     def run(self):
         while 1:
             message_recu = self.connexion.recv(1024)
-            print "*" + message_recu + "*"
+            #print "*" + message_recu + "*"
             view.textEditFromServer.emit(clientRobotView.QtCore.SIGNAL("add_post(QString)"), message_recu)
         self._Thread__stop()
         print "Client arrêté. Connexion interrompue."
